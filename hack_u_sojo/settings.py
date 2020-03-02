@@ -25,7 +25,10 @@ SECRET_KEY = '#ey0uo4s+y(y-(6+_%hj%wtc)btk%_fmsks9((uc4xb78alsh+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['amateras.wsd.kutc.kansai-u.ac.jp']
+ALLOWED_HOSTS = [
+    'amateras.wsd.kutc.kansai-u.ac.jp',
+    '127.0.0.1',
+]
 
 
 # Application definition
