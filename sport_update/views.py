@@ -7,12 +7,16 @@ from django.views.decorators.csrf import csrf_exempt
 
 def rooter(request):
     print(request.POST)
-    data = "{\"heart_rate\": 77, \"humidty_level\": 88}"
+    data = request.POST.get('data')
+    print(data)
 
     heart_rate = data.split(' ')[1]
     heart_rate = heart_rate.strip(',')
     humidty_level = data.split(' ')[3]
     humidty_level = humidty_level.strip('}')
+
+    print(heart_rate)
+    print(humidty_level)
 
     pattern = 0
     if 0 <= int(heart_rate) <= 32:
@@ -29,4 +33,10 @@ def rooter(request):
     else:
         pattern += 3
 
-    return render(request, 'sport_update/index.html', {"pattern": pattern, "heart_rate": heart_rate, "humidty_level": humidty_level})
+    dict = {
+        "pattern": pattern,
+        "heart_rate": heart_rate,
+        "humidty_level": humidty_level
+    }
+
+    return render(request, 'sport_update/index.html', dict)
