@@ -29,7 +29,4 @@ def rooter(request):
     else:
         pattern += 3
 
-    #url = "http://127.0.0.1:8000/"
-    #requests.post(url, {"pattern": pattern})
-
     return render(request, 'sport_update/index.html', {"pattern": pattern, "heart_rate": heart_rate, "humidty_level": humidty_level})
