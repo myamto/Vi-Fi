@@ -40,3 +40,10 @@ def rooter(request):
     }
 
     return render(request, 'sport_update/index.html', dict)
+
+
+def playerSelect(request):
+    print(request.POST)
+    data = request.POST.get('data')
+
+    return render(request, 'sport_update/select.html')
