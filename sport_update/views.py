@@ -20,16 +20,22 @@ def rooter(request):
 
     pattern = 0
     if 60 <= int(heart_rate) <= 80:
-        pattern += 0
+        pattern += 1
     elif 81 <= int(heart_rate) <= 130:
         pattern += 2
     elif 131 <= int(heart_rate) <= 200:
-        pattern += 4
+        pattern += 3
 
-    if 0 <= int(humidty_level) <= 55 :
+    if pattern == 1:
+        pattern += 0
+    elif pattern == 3:
         pattern += 1
-    elif 56 <= int(humidty_level) <= 90 :
-        pattern += 2
+
+    if pattern == 2:
+        if 0 <= int(humidty_level) <= 55 :
+            pattern += 0
+        elif 56 <= int(humidty_level) <= 90 :
+            pattern += 1
 
 
     if not pattern == 0:
