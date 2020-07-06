@@ -41,7 +41,7 @@ def rooter(request):
         pattern = 0
 
     url = "http://184a4a286849.ngrok.io/arduino/" + str(pattern)
-    requests.post(url)
+    requests.get(url)
 
     dict = {
         "pattern": pattern,
