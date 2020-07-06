@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import requests
 import os
-os.environ["http_proxy"] = "http://wwwproxy.itc.kansai-u.ac.jp:8080"
-os.environ["https_proxy"] = "http://wwwproxy.itc.kansai-u.ac.jp:8080"
+os.environ["http_proxy"] = "http://proxy.itc.kansai-u.ac.jp:8080"
+os.environ["https_proxy"] = "http://proxy.itc.kansai-u.ac.jp:8080"
 
 heart_rate="190"
 humidty_level="58"
