@@ -18,7 +18,7 @@ def rooter(request):
     print(heart_rate)
     print(humidty_level)
 
-    pattern = 0
+    
     if 60 <= int(heart_rate) <= 80:
         pattern = 1
     elif 81 <= int(heart_rate) <= 130:
