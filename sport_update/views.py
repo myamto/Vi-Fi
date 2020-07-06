@@ -23,7 +23,7 @@ def rooter(request):
         pattern = 1
     elif 81 <= int(heart_rate) <= 130:
         pattern = 2
-    elif 131 <= int(heart_rate) <= 200:
+    elif 131 <= int(heart_rate) <= 190:
         pattern = 4
     elif int(heart_rate) < 60 or int(heart_rate) > 190:
         pattern = 0
