@@ -18,7 +18,7 @@ def rooter(request):
     print(heart_rate)
     print(humidty_level)
 
-    
+
     if 60 <= int(heart_rate) <= 80:
         pattern = 1
     elif 81 <= int(heart_rate) <= 130:
@@ -31,8 +31,8 @@ def rooter(request):
     if pattern == 2 and 56 <= int(humidty_level) <= 90:
         pattern = 3
 
-    #url = "http://184a4a286849.ngrok.io/arduino/" + str(pattern)
-    #requests.get(url)
+    url = "http://184a4a286849.ngrok.io/arduino/" + str(pattern)
+    requests.get(url)
 
     dict = {
         "pattern": pattern,
