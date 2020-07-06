@@ -20,25 +20,16 @@ def rooter(request):
 
     pattern = 0
     if 60 <= int(heart_rate) <= 80:
-        pattern += 1
+        pattern = 1
     elif 81 <= int(heart_rate) <= 130:
-        pattern += 2
+        pattern = 2
     elif 131 <= int(heart_rate) <= 200:
-        pattern += 3
-
-    if pattern == 1:
-        pattern += 0
-    elif pattern == 3:
-        pattern += 1
-
-    if pattern == 2:
-        if 0 <= int(humidty_level) <= 55 :
-            pattern += 0
-        elif 56 <= int(humidty_level) <= 90 :
-            pattern += 1
-
-    if int(heart_rate) < 60 or int(heart_rate) > 190:
+        pattern = 4
+    elif int(heart_rate) < 60 or int(heart_rate) > 190:
         pattern = 0
+
+    if pattern == 2 and 56 <= int(humidty_level) <= 90:
+        pattern = 3
 
     url = "http://184a4a286849.ngrok.io/arduino/" + str(pattern)
     requests.get(url)
