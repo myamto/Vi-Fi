@@ -15,8 +15,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hack_u_sojo.settings')
 
 application = get_wsgi_application()
 
-http_proxy  = "http://wwwproxy.itc.kansai-u.ac.jp:8080"
-https_proxy = "http://wwwproxy.itc.kansai-u.ac.jp:8080"
+http_proxy  = "http://proxy.itc.kansai-u.ac.jp:8080"
+https_proxy = "http://proxy.itc.kansai-u.ac.jp:8080"
 
 proxyDict = {
               "http"  : http_proxy,
