@@ -31,7 +31,7 @@ def rooter(request):
     if pattern == 2 and 70 <= int(humidty_level) <= 90:
         pattern = 3
 
-    url = "http://6fcf9a26d290.ngrok.io/arduino/" + str(pattern)
+    url = "http://6a0755273ab2.ngrok.io/arduino/" + str(pattern)
     requests.get(url)
 
     dict = {
